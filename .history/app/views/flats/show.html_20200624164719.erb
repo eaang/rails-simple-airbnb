@@ -1,0 +1,51 @@
+<div class="big-picture min-vw-100"></div>
+<div class="container mt-n5">
+  <div class="row">
+    <div class="col-8">
+      <div class="flat-show card p-3 shadow-sm">
+        <h1><%= @flat.name %></h1>
+        <p><%= @flat.address %></p>
+      </div>
+      <div class="flat-show card p-3 mt-3 shadow-sm">
+        <h3>A bit more about this flat...</h3>
+        <p><%= @flat.description %></p>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="bookings card p-3">
+        <h5>Book this place!</h5>
+        <div class="input-group mt-2">
+          <div class="input-group-prepend">
+            <span class="input-group-text">From:</span>
+          </div>
+          <input type="text" class="form-control" placeholder="DD/MM/YYYY" required>
+        </div>
+        <div class="input-group mt-2">
+          <div class="input-group-prepend">
+            <span class="input-group-text">To:</span>
+          </div>
+          <input type="text" class="form-control" placeholder="DD/MM/YYYY" required>
+        </div>
+        <button class="btn btn-success mt-2" type="submit">Book</button>
+      </div>
+      <div class="details card p-3 mt-3">
+        <h5>Details</h5>
+        <div class="icons-and-info d-flex">
+          <div class="listing-info h5"><i class="fas fa-users"></i> <%= @flat.number_of_guests %></div>
+          <div class="price-info ml-3 h5"><i class="fas fa-money-bill-wave"></i> <%= @flat.price_per_night %></div>
+        </div>
+      </div>
+      <div class="share card p-3 mt-3">
+      <div class="share-contents d-flex justify-content-between align-items-end">
+        <div class="title"><h5>Share</h5></div>
+        <div class="social-media h4">
+          <i class="fab fa-twitter-square"></i>
+          <i class="fab fa-facebook-square"></i></i>
+          <i class="fab fa-pinterest-square"></i>
+          <i class="fas fa-envelope-square"></i>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

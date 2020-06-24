@@ -1,0 +1,38 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+      <h1>All our Flats (<%= @flats.length %>)</h1>
+    </div>
+  </div>
+  <div class="cards">
+    <% @flats.each do |listing| %>
+      <div class="full-listing">
+          <div class="card bg-light">
+            <div class="card-body bg-col">
+              <h5 class="card-title"><%= listing.name %></h5>
+              <p class="card-text"><%= listing.address %></p>
+              <div class="icons-and-info d-flex">
+                <div class="listing-info"><i class="fas fa-users"></i> <%= listing.number_of_guests %></div>
+                <div class="price-info ml-3"><i class="fas fa-money-bill-wave"></i> <%= listing.price_per_night %></div>
+              </div>
+            </div>
+          </div>
+          <div class="link-box d-flex mb-3 p-3 bg-white border border-top-0">
+            <div class="link-info mr-3">
+              <%=  link_to "More info", listing, class: "text-primary" %>
+            </div>
+            <div class="link-edit mr-3">
+              <%= link_to 'Edit', edit_flat_path(listing), class: "text-warning" %>
+            </div>
+            <div class="link-remove">
+              <%= link_to "Remove",
+                flat_path(listing),
+                method: :delete,
+                data: { confirm: "Delete '#{listing.name}'?" },
+                class: "text-danger" %>
+            </div>
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>

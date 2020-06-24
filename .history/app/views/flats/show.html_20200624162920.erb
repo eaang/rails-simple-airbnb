@@ -1,0 +1,23 @@
+<div class="big-picture min-vw-100"></div>
+<div class="container mt-n5">
+  <div class="row">
+    <div class="col-8">
+    <div class="flat-show card p-3 shadow-sm">
+      <h1><%= @flat.name %></h1>
+      <p><%= @flat.address %></p>
+      </div>
+      <div class="flat-show card p-3 mt-3 shadow-sm">
+      <h3>A bit more about this flat...</h3>
+      <p><%= @flat.description %></p>
+      </div>
+    </div>
+    <div class="card col-4">
+      <h5>Book this place!</h5>
+<%= simple_form_for @flat do |f| %>
+  <%= f.input as: :date %>
+  <%= f.input as: :date %>
+  <%= f.button :submit %>
+<% end %>
+    </div>
+  </div>
+</div>
