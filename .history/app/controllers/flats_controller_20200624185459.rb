@@ -2,8 +2,8 @@ class FlatsController < ApplicationController
   before_action :find_flat, only: [:show, :edit, :update, :destroy]
 
   def index
-    @flats = Flat.all.order('created_at DESC')
-    @flats = Flat.where("name LIKE '%#{params[:query].split(' ').join('%')}%'") if params[:query].present?
+    @posts = Post.all.order('created_at DESC')
+    @posts = Flat.where("name LIKE '%#{params[:query].split(' ').join('%')}%'") if params[:query].present?
   end
 
   def show

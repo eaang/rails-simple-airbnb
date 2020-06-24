@@ -2,8 +2,12 @@ class FlatsController < ApplicationController
   before_action :find_flat, only: [:show, :edit, :update, :destroy]
 
   def index
-    @flats = Flat.all.order('created_at DESC')
-    @flats = Flat.where("name LIKE '%#{params[:query].split(' ').join('%')}%'") if params[:query].present?
+    if params[:query]
+      str = params[:query].split(' ').join('%')
+      @flats = Flat.where("name LIKE '%#{str}%'")
+    else
+      @flats = Flat.all
+    end
   end
 
   def show

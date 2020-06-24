@@ -2,8 +2,8 @@ class FlatsController < ApplicationController
   before_action :find_flat, only: [:show, :edit, :update, :destroy]
 
   def index
-    @flats = Flat.all.order('created_at DESC')
-    @flats = Flat.where("name LIKE '%#{params[:query].split(' ').join('%')}%'") if params[:query].present?
+    foo_input_value = params[:query]
+    @flats = Flat.all
   end
 
   def show
@@ -35,11 +35,16 @@ class FlatsController < ApplicationController
     redirect_to flats_path
   end
 
+  def query
+    input = params[:search]
+    { query: "%#{input.split(' ').join('%')}%" }
+  end
 
   private
 
   def flat_params
-    params.permit(:name, :address, :description, :price_per_night, :number_of_guests, :picture_url, :query)
+    params.require(:flat).permit(:name, :address, :description, :price_per_night,
+                                 :number_of_guests, :picture_url)
   end
 
   def find_flat
