@@ -13,7 +13,7 @@
     <nav class="navbar navbar-light bg-light justify-content-between">
       <a class="navbar-brand" href=<%= flats_path %>>Simple Airbnb</a>
       <div class="search-and-new-wrapper d-flex">
-        <%= form_tag(flats_path, class: 'form-inline', method: :get) do %>
+        <%= form_tag(flats_path, , class: 'form-inline', method: :get) do %>
           <%= text_field_tag :query, params[:query], class: 'form-control' %>
           <%= submit_tag 'Search', name: nil, class: 'btn btn-primary' %>
         <% end %>

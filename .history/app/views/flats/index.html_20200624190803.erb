@@ -4,7 +4,7 @@
       <h1>All our Flats (<%= @flats.length %>)</h1>
       <% if params[:query].present? %>
         <p>You searched for <strong><%= params[:query] %></strong>.
-        We found <%= @flats.length %> out of <%= Flat.all.length %> on our website.</p>
+        We found <%= @flats.length %> out of <% Flat.all.length %> on our website.</p>
       <% end %>
     </div>
   </div>
