@@ -1,0 +1,9 @@
+<h1>Add a New Flat</h1>
+<%= simple_form_for @flat do |f| %>
+  <%= f.input :name, as: :string, placeholder: 'Name' %>
+  <%= f.input :address, as: :text, placeholder: 'Address'  %>
+  <%= f.input :description, as: :tel, placeholder: 'Phone number' %>
+  <%= f.input :price_per_night, as: :tel, placeholder: 'Phone number' %>
+  <%= f.input :number_of_guests, as: :tel, placeholder: 'Phone number' %>
+  <%= f.button :submit, class: 'btn btn-primary' %>
+<% end %>

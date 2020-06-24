@@ -1,0 +1,9 @@
+<h1>Add a New Flat</h1>
+<%= simple_form_for @flat do |f| %>
+  <%= f.input :name, as: :string, placeholder: 'Describe your flat' %>
+  <%= f.input :address, as: :text, placeholder: 'Flat address'  %>
+  <%= f.input :description, as: :tel, placeholder: 'Write a little about your flat' %>
+  <%= f.input :price_per_night, as: :tel %>
+  <%= f.input :number_of_guests, as: :tel %>
+  <%= f.button :submit, class: 'btn btn-primary' %>
+<% end %>
