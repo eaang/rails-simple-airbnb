@@ -31,7 +31,7 @@ Flat.create!(
   description: 'Relax with the sound of the ocean to lull you to sleep in this historic flat close to the city, but far from the crowds.',
   price_per_night: rand(50..150),
   number_of_guests: rand(1..4),
-  picture_url: 'https://images.unsplash.com/photo-1528301719638-3f517aebc11c'
+  picture_url: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688'
 )
 
 Flat.create!(
@@ -40,7 +40,7 @@ Flat.create!(
   description: 'Luxury is within reach with this exclusive private hideaway that you and your loved one are sure to delight in.',
   price_per_night: rand(50..150),
   number_of_guests: rand(1..4),
-  picture_url: 'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd'
+  picture_url: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688'
 )
 
 Flat.create!(
@@ -49,7 +49,7 @@ Flat.create!(
   description: 'Relax and unwind to the atmospheric wails and howls that surround you. Truly a unique listing!',
   price_per_night: rand(50..150),
   number_of_guests: rand(1..4),
-  picture_url: 'https://images.unsplash.com/photo-1507149833265-60c372daea22'
+  picture_url: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688'
 )
 
 Flat.create!(
@@ -58,5 +58,5 @@ Flat.create!(
   description: 'At this point we really are just out of ideas and ripping off Studio Ghibli.',
   price_per_night: rand(50..150),
   number_of_guests: rand(1..4),
-  picture_url: 'https://images.unsplash.com/photo-1501876725168-00c445821c9e'
+  picture_url: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688'
 )

@@ -31,7 +31,7 @@ Flat.create!(
   description: 'Relax with the sound of the ocean to lull you to sleep in this historic flat close to the city, but far from the crowds.',
   price_per_night: rand(50..150),
   number_of_guests: rand(1..4),
-  picture_url: 'https://images.unsplash.com/photo-1528301719638-3f517aebc11c'
+  picture_url: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688'
 )
 
 Flat.create!(
