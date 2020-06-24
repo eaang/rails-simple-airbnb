@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-12">
+    <h1>All our Flats</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <p>All <%= @flats.length %> flats<p>
+  </div>
+</div>
+
+<% flats = @flats.each_slice(3) %>
+<% flats.each do |flat| %>
+<div class="row">
+  <% flat.each do |listing| %>
+  <div class="col-4">
+    <div class="card">
+    
+  <div class="card-body">
+    <h5 class="card-title"><%= listing.name %></h5>
+    <p class="card-text"><%= listing.address %><br>
+    <i class="fas fa-users"></i> <%= listing.number_of_guests %>
+    <i class="fas fa-money-bill-wave"></i> <%= listing.price_per_night %> </p>
+    <a href="#" class="card-link">More info</a>
+  </div>
+  <%= listing %>
+    </div>
+  </div>
+  <% end %>
+</div>
+<% end %>

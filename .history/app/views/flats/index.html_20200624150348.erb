@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-12">
+    <h1>All our Flats</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <p>All <%= @flats.length %> flats<p>
+  </div>
+</div>
+
+<% flats = @flats.each_slice(3) %>
+<% flats.each do |flat| %>
+<div class="row">
+  <div class="col-4">
+    <div class="flat-box">
+    <%= flat[0] %>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="flat-box">
+    <%= flat[1] %>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="flat-box">
+    <%= flat[2] %>
+    </div>
+  </div>
+</div>
+<% end %>
+<%= flat.length %>
